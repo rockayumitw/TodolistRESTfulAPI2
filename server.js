@@ -9,13 +9,7 @@ const headers = {
     "Content-Type": "text/json"
 }
 
-const todos = [
-    {
-        title: '123456',
-        id: '111'
-    }
-]
-
+const todos = []
 
 const requireListening = (req, res) => {
     
@@ -107,4 +101,4 @@ const requireListening = (req, res) => {
     }
 }
 
-http.createServer(requireListening).listen(3005);
+http.createServer(requireListening).listen(process.env.PORT || 3000);
